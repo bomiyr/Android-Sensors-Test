@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreenCompat xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreferenceCompat
+        android:id="@+id/accelerometer"
+        android:defaultValue="true"
+        android:key="accelerometer"
+        android:summary="Measures the acceleration force in m/s2 that is applied to a device on all three physical axes (x, y, and z), including the force of gravity."
+        android:title="Accelerometer" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/ambient_temperature"
+        android:defaultValue="true"
+        android:key="ambient_temperature"
+        android:summary="Measures the ambient room temperature in degrees Celsius (°C). See note below."
+        android:title="Ambient Temperature" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/gravity"
+        android:defaultValue="true"
+        android:key="gravity"
+        android:summary="Measures the force of gravity in m/s2 that is applied to a device on all three physical axes (x, y, z)."
+        android:title="Gravity" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/gyroscope"
+        android:defaultValue="true"
+        android:key="gyroscope"
+        android:summary="Measures a device's rate of rotation in rad/s around each of the three physical axes (x, y, and z)."
+        android:title="Gyroscope" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/light"
+        android:defaultValue="true"
+        android:key="light"
+        android:summary="Measures the ambient light level (illumination) in lx."
+        android:title="Light" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/linear_acceleration"
+        android:defaultValue="true"
+        android:key="linear_acceleration"
+        android:summary="Measures the acceleration force in m/s2 that is applied to a device on all three physical axes (x, y, and z), excluding the force of gravity."
+        android:title="Linear Acceleration" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/magnetic_field"
+        android:defaultValue="true"
+        android:key="magnetic_field"
+        android:summary="Measures the ambient geomagnetic field for all three physical axes (x, y, z) in μT."
+        android:title="Magnetic Field" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/orientation"
+        android:defaultValue="true"
+        android:key="orientation"
+        android:summary="Measures degrees of rotation that a device makes around all three physical axes (x, y, z). As of API level 3 you can obtain the inclination matrix and rotation matrix for a device by using the gravity sensor and the geomagnetic field sensor in conjunction with the getRotationMatrix() method."
+        android:title="Orientation" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/pressure"
+        android:defaultValue="true"
+        android:key="pressure"
+        android:summary="Measures the ambient air pressure in hPa or mbar."
+        android:title="Pressure" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/proximity"
+        android:defaultValue="true"
+        android:key="proximity"
+        android:summary="Measures the proximity of an object in cm relative to the view screen of a device. This sensor is typically used to determine whether a handset is being held up to a person's ear."
+        android:title="Proximity" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/relative_humidity"
+        android:defaultValue="true"
+        android:key="relative_humidity"
+        android:summary="Measures the relative ambient humidity in percent (%)."
+        android:title="Relative Humidity" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/rotation_vector"
+        android:defaultValue="true"
+        android:key="rotation_vector"
+        android:summary="Measures the orientation of a device by providing the three elements of the device's rotation vector."
+        android:title="Rotation Vector" />
+
+    <SwitchPreferenceCompat
+        android:id="@+id/temperature"
+        android:defaultValue="true"
+        android:key="temperature"
+        android:summary="Measures the temperature of the device in degrees Celsius (°C). This sensor implementation varies across devices and this sensor was replaced with the TYPE_AMBIENT_TEMPERATURE sensor in API Level 14"
+        android:title="Temperature" />
+
+</PreferenceScreenCompat>

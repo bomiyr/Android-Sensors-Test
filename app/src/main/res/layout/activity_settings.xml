@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/accelerometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accelerometer"
+            app:info="Measures the acceleration force in m/s2 that is applied to a device on all three physical axes (x, y, and z), including the force of gravity."
+            app:preference_key="accelerometer" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/ambient_temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ambient Temperature"
+            app:info="Measures the ambient room temperature in degrees Celsius (°C). See note below."
+            app:preference_key="ambient_temperature" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/game_rotation_vector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Game Rotation Vector"
+            app:info="Identical to Rotation Vector except that it doesn't use the geomagnetic field. Therefore the Y axis doesn't point north, but instead to some other reference, that reference is allowed to drift by the same order of magnitude as the gyroscope drift around the Z axis. In the ideal case, a phone rotated and returning to the same real-world orientation should report the same game rotation vector (without using the earth's geomagnetic field). However, the orientation may drift somewhat over time. (Available only on Android 4.3+)"
+            app:preference_key="game_rotation_vector" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/geomagnetic_rotation_vector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Geomagnetic Rotation Vector"
+            app:info="Similar to Rotation Vector, but using a magnetometer instead of using a gyroscope. This sensor uses lower power than the other rotation vectors, because it doesn't use the gyroscope. However, it is more noisy and will work best outdoors. (Available only on Android 4.4+)"
+            app:preference_key="geomagnetic_rotation_vector" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/gravity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gravity"
+            app:info="Measures the force of gravity in m/s2 that is applied to a device on all three physical axes (x, y, z)."
+            app:preference_key="gravity" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/gyroscope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gyroscope"
+            app:info="Measures a device's rate of rotation in rad/s around each of the three physical axes (x, y, and z)."
+            app:preference_key="gyroscope" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/gyroscope_uncalibrated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gyroscope Uncalibrated"
+            app:info="Similar to Gyroscope but no gyro-drift compensation has been performed to adjust the given sensor values. However, such gyro-drift bias values are returned to you separately in the result values so you may use them for custom calibrations. Factory calibration and temperature compensation is still applied to the rate of rotation (angular speeds). (Available only on Android 4.3+)"
+            app:preference_key="gyroscope_uncalibrated" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/heart_beat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heart Beat"
+            app:info="A sensor of this type returns an event everytime a hear beat peak is detected. Peak here ideally corresponds to the positive peak in the QRS complex of an ECG signal. (Available only on Android 6.0+)"
+            app:preference_key="heart_beat" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/heart_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Heart Rate"
+            app:info="The reported value is the heart rate in beats per minute. (Available only on Android 4.4W+)"
+            app:preference_key="heart_rate" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Light"
+            app:info="Measures the ambient light level (illumination) in lx."
+            app:preference_key="light" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/linear_acceleration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Linear Acceleration"
+            app:info="Measures the acceleration force in m/s2 that is applied to a device on all three physical axes (x, y, and z), excluding the force of gravity."
+            app:preference_key="linear_acceleration" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/magnetic_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Magnetic Field"
+            app:info="Measures the ambient geomagnetic field for all three physical axes (x, y, z) in μT."
+            app:preference_key="magnetic_field" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/magnetic_field_uncalibrated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Magnetic Field Uncalibrated"
+            app:info="Similar to magnetic field but the hard iron calibration (device calibration due to distortions that arise from magnetized iron, steel or permanent magnets on the device) is not considered in the given sensor values. However, such hard iron bias values are returned to you separately in the result values so you may use them for custom calibrations. Also, no periodic calibration is performed (i.e. there are no discontinuities in the data stream while using this sensor) and assumptions that the magnetic field is due to the Earth's poles is avoided, but factory calibration and temperature compensation have been performed. (Available only on Android 4.3+)"
+            app:preference_key="magnetic_field_uncalibrated" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/motion_detect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motion Detect"
+            app:info="A Motion Detect event is produced if the device has been in motion for at least 5 seconds with a maximal latency of 5 additional seconds. ie: it may take up anywhere from 5 to 10 seconds afte the device has been at rest to trigger this event. The only allowed value is 1.0. (Available only on Android 7.0+)"
+            app:preference_key="motion_detect" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/pose_6dof"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pose 6DOF"
+            app:info="Pose sensor with 6 degrees of freedom. Similar to Rotation Vector, with additional delta translation from an arbitrary reference point. See SensorEvent.values for more details. Can use camera, depth sensor etc to compute output value. This is expected to be a high power sensor and expected only to be used when the screen is on. Expected to be more accurate than the rotation vector alone. (Available only on Android 7.0+)"
+            app:preference_key="pose_6dof" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/pressure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pressure"
+            app:info="Measures the ambient air pressure in hPa or mbar."
+            app:preference_key="pressure" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/proximity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proximity"
+            app:info="Measures the proximity of an object in cm relative to the view screen of a device. This sensor is typically used to determine whether a handset is being held up to a person's ear."
+            app:preference_key="proximity" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/relative_humidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Relative Humidity"
+            app:info="Measures the relative ambient humidity in percent (%)."
+            app:preference_key="relative_humidity" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/rotation_vector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rotation Vector"
+            app:info="Measures the orientation of a device by providing the three elements of the device's rotation vector."
+            app:preference_key="rotation_vector" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/significant_motion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Significant Motion"
+            app:info="It triggers when an event occurs and then automatically disables itself. The sensor continues to operate while the device is asleep and will automatically wake the device to notify when significant motion is detected. The application does not need to hold any wake locks for this sensor to trigger. This is a wake up sensor. (Available only on Android 4.3+)"
+            app:preference_key="significant_motion" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/stationary_detect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stationary Detect"
+            app:info="A Stationary Detect event is produced if the device has been stationary for at least 5 seconds with a maximal latency of 5 additional seconds. ie: it may take up anywhere from 5 to 10 seconds afte the device has been at rest to trigger this event. The only allowed value is 1.0. (Available only on Android 7.0+)"
+            app:preference_key="stationary_detect" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/step_counter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step Counter"
+            app:info="A sensor of this type returns the number of steps taken by the user since the last reboot while activated. The value is returned as a float (with the fractional part set to zero) and is reset to zero only on a system reboot. The timestamp of the event is set to the time when the last step for that event was taken. This sensor is implemented in hardware and is expected to be low power. If you want to continuously track the number of steps over a long period of time, do NOT unregister for this sensor, so that it keeps counting steps in the background even when the AP is in suspend mode and report the aggregate count when the AP is awake. Application needs to stay registered for this sensor because step counter does not count steps if it is not activated. This sensor is ideal for fitness tracking applications. It is defined as an REPORTING_MODE_ON_CHANGE sensor. (Available only on Android 4.4+)"
+            app:preference_key="step_counter" />
+
+        <com.bomiyr.sensors.CustomToggle
+            android:id="@+id/step_detector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Step Detector"
+            app:info="A sensor of this type triggers an event each time a step is taken by the user. The only allowed value to return is 1.0 and an event is generated for each step. Like with any other event, the timestamp indicates when the event (here the step) occurred, this corresponds to when the foot hit the ground, generating a high variation in acceleration. This sensor is only for detecting every individual step as soon as it is taken, for example to perform dead reckoning. If you only need aggregate number of steps taken over a period of time, register for TYPE_STEP_COUNTER instead. It is defined as a REPORTING_MODE_SPECIAL_TRIGGER sensor. (Available only on Android 4.4+)"
+            app:preference_key="step_detector" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
